@@ -1,0 +1,60 @@
+body {
+	background-image: url('background.png');
+	font-family: custom, thing, sans-serif;
+	font-size: 20px;
+	color: #696969;
+	text-shadow: 1px 1px 1px #FFF;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+a { 
+	text-decoration: none;
+}
+
+table {
+	width: 100%;
+}
+
+table th {
+	text-align: left;
+	text-decoration: underline;
+}
+
+#container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+#flex-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.flex-header {
+	flex: 1 0 50%;
+}
+
+#headshot {
+	width: 50%;
+	border-radius: 10px;
+	border: 2px solid #696969;
+}
+
+#name h1 {
+	margin: 0 auto;
+}
+
+#contact {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contact-child img {
+	width: 100px;
+}

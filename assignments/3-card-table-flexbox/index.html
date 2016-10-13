@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Wednesday - Flexbox Card Table </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Attempting to build a card table with CSS Flexbox">
+	<style>
+
+		#table {
+			height: 600px;
+			width: 100%;
+			background-color: green;
+
+			/* Flex rules: Here be dragons */
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.card {
+			height: 40%;
+
+			/* Flex rules: Here be dragons */
+			flex: 0 0 160px;
+
+			/*
+			 * Here come the flipping rules!
+			 */
+
+			/* Needed to stack the front/back on top of each other */
+			position: relative;
+			/* The speed of our rotation will take this long */
+			transition: 1.0s; 
+			/* Keep the divs in 3d space, instead of 2d */
+			transform-style: preserve-3d;
+		}
+
+		.red {
+			color: red;
+		}
+
+		.top {
+			text-align: left;
+		}
+
+		.middle {
+			text-align: center;
+		}
+
+		.middle img {
+			width: 50%;
+		}
+
+		.bottom {
+			text-align: right;
+		}
+
+		.front {
+			background-color: #FFF;
+
+			font-size: 36px;
+			font-weight: bold;
+
+			/* Make the card a container for it's children divs */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			/* At first, rotate card front away from us so it is TRULY face down */
+			transform: rotateY(180deg);
+		}
+
+		.back {
+			background-image: url('card-back.png');
+			transform: rotateY(0deg);
+		}
+
+		.front, .back {
+			border-radius: 8px;
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+
+			/* When the DIV is facing away from us, pretend that it isn't there */
+			backface-visibility: hidden;
+
+			/* Allows the divs to sit on top of each other */
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.card:hover {
+			transform: rotateY(180deg);
+			margin-bottom: 100px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="table">
+
+		<div class="card">
+			<div class="front">
+				<div class="top">A</div>
+				<div class="middle">
+					<img src="clubs.jpg">
+				</div>
+				<div class="bottom">A</div>
+			</div>
+			<div class="back"></div>
+		</div>
+
+		<div class="card red">
+			<div class="front">
+				<div class="top">A</div>
+				<div class="middle">
+					<img src="diamonds.jpg">
+				</div>
+				<div class="bottom">A</div>
+			</div>
+			<div class="back"></div>
+		</div>
+
+		<div class="card">
+			<div class="front">
+				<div class="top">A</div>
+				<div class="middle">
+					<img src="spades.jpg">
+				</div>
+				<div class="bottom">A</div>
+			</div>
+			<div class="back"></div>
+		</div>
+
+		<div class="card red">
+			<div class="front">
+				<div class="top">A</div>
+				<div class="middle">
+					<img src="hearts.jpg">
+				</div>
+				<div class="bottom">A</div>
+			</div>
+			<div class="back"></div>
+		</div>
+
+	</div>
+
+</body>
+</html>

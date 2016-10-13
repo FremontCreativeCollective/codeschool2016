@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tuesday - HTML Forms</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Learning about HTML5 form tags">
+</head>
+<body>
+
+	<form method="POST" action="form_process.java">
+
+		<input type="text" maxlength="5" placeholder="Pokemon Name">
+
+		<input type="color">
+
+		<input checked type="checkbox">
+		<input type="checkbox">
+
+		<input type="radio" name="gender" value="male">
+		<input type="radio" name="gender" value="female">
+		<input type="radio" name="gender" value="unknown">
+
+		<input type="number" min="50" max="100" step="2">
+
+		<input type="date">
+
+		<input type="password">
+
+		<input type="file">
+
+		<textarea name="large_question" rows="10" cols="80">This is the text that will show up inside of the text area.</textarea>
+
+		<select name="pokemon_type">
+			<option value="w">Water</option>
+			<option value="f">Fire</option>
+			<option selected value="g">Grass</option>
+		</select>
+
+		<input type="submit" value="SEND IT AWAY!">
+
+	</form>
+
+</body>
+</html>

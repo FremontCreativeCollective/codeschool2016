@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 7 Monday</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Reviewing flexbox from last week">
+	<style>
+		body {
+			margin: 0px;
+		} 
+
+		#container {
+			display: flex;
+			flex-direction: row;
+			height: 600px;
+
+			/* Centering and spacing */
+			justify-content: space-around; /* primary axis */
+			align-items: center;/* opposite axis */
+
+		}
+
+		.item {
+			flex: 0 0 200px;
+			/* width: 100%; */
+			line-height: 100px;
+			font-size: 36px;
+			color: #FFF;
+			text-align: center;
+		}
+
+		#one 	{ background-color: red; 	}
+		#two 	{ background-color: blue; 	}
+		#three 	{ background-color: purple; }
+		#four 	{ background-color: black; 	}
+
+	</style>
+</head>
+<body>
+
+	<div id='container'>
+		<div class="item" id="one">One Run</div>
+		<div class="item" id="two">Two Zoo</div>
+		<div class="item" id="three">Three tree</div>
+		<div class="item" id="four">Four door</div>	
+	</div> 
+
+</body>
+</html>

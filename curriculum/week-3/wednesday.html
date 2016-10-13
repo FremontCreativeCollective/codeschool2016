@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 3 - Wednesday</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Learning about the CSS display property and the box model">
+	<style>
+
+		img {
+			display: none;
+		}
+
+		div {
+			display: inline;
+		}
+
+		#box {
+			display: block;
+			margin-top: 200px;
+			margin-left: 10px;
+			margin-right: 20px;
+			border-top-width: 5px;
+			border-top-color: red;
+			border-top-style: double;
+			padding-top: 15px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<!-- Two types of display values: 
+	1. Block - greedy
+	2. Inline - loosey-goosey
+	-->
+
+	<div>
+		This is some text inside of a div.
+	</div>
+
+	<img src="../Week_1/pokedex/images/025-sandshrew.jpg">
+
+	<!--
+	THE CSS BOX MODEL
+	3 properties that every block-level element has:
+		1. Margin - space between an element and OTHER elements (A)
+		2. Border - Is the border...lines around things (B)
+		3. Padding - space between border and content (C)
+
+	---------         -----B-----
+	| Thing |     A	  |  Thing C|
+	---------	      -----------
+	-->
+
+	<div id="box">
+		Learning about the CSS Box Model.
+	</div>
+
+
+
+
+</body>
+</html>
+
+	<!--  for Thursday, create a new HTML page with 3 divs with some content. Each div should have a unique border, margin and padding -->

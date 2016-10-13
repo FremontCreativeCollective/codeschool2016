@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Landing Page</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Building our own personal landing page for use in job hunting!">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- Midterm Assignment: Personal Landing Page
+
+	1. [ ] A container div centered on the screen, set to a certain width
+	2. [ ] At least one image of yourself (perferrably a headshot)
+	3. [ ] Use a custom Google Font 
+	4. [ ] A header with your name and short title
+	5. [ ] Sub-headers for every section of the page
+	6. [ ] Paragraph describing yourself and your hobbies
+	7. [ ] A table of related coursework or classes you've taken
+	8. [ ] A table of links to Github projects with descriptions
+	9. [ ] Use images as links to your social networks
+	10. [ ] Use a flexbox div somewhere on the page (make columns or a spaced row)
+	11. [ ] Use a nifty background pattern (background-image)
+	12. [ ] Use an external CSS file and link to it from your HTML file
+	13. [ ] Create Github repository and upload files
+	14. [ ] Add Github pages to make it available online
+
+	-->
+
+	<div id="container">
+
+		<div id="flex-header">
+
+			<div class='flex-header' id="image">
+				<img id="headshot" src="https://scontent-atl3-1.xx.fbcdn.net/t31.0-8/736142_566518631031_583452312_o.jpg">
+			</div> 
+			<div class='flex-header' id="name">
+				<h1>Brock Ellis</h1>
+				<p>Crappy full stack web developer</p>
+			</div>
+
+		</div> <!-- end flex header -->
+
+		<h2>About Me</h2>
+		<p>
+		My name is Brock Ellis and I am a computer programmer from Fremont, NE. I love learning new things. Wathching instructional YouTube videos or reading blogs posts is how I'd like to spend most of my days. I have a pretty cool wife, two kids, and two dogs. I enjoy playing video games and doing home improvement projects in my spare time.
+		</p>
+
+		<div id="coursework">
+			<h2>Relevant Coursework</h2>
+			<table>
+				<tr>
+					<th>Course</th>
+					<th>Year</th>
+				</tr>
+				<tr>
+					<td>Summer Code Camp @ First State Bank and Trust</td>
+					<td>2013</td>
+				</tr>
+				<tr>
+					<td>Summer Code Camp @ First State Bank and Trust</td>
+					<td>2014</td>
+				</tr>
+				<tr>
+					<td>Summer Code Camp @ Midland University</td>
+					<td>2015</td>
+				</tr>
+				<tr>
+					<td>Summer Code Camp @ Midland University</td>
+					<td>2016</td>
+				</tr>
+			</table>
+		</div> <!-- end coursework div -->
+
+		<div id="github">
+			<h2>My projects</h2>
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">Flexbox Card Table</a>
+					</td>
+					<td>A card table simulation using flexbox and CSS animations</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">CSS Movie Poster</a>
+					</td>
+					<td>A movie posted made with CSS Flexbox</td>
+				</tr>	
+				<tr>
+					<td>
+						<a href="#">Pokecard</a>
+					</td>
+					<td>Re-created Pokecard with HTML and CSS</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">YouTube Embed</a>
+					</td>
+					<td>Embedded YouTube video with context</td>
+				</tr>
+			</table>
+		</div> <!-- end github table -->
+
+		<h2>Contact Me</h2>
+
+		<div id="contact">
+
+			<div class="contact-child">
+				<a href="https://www.twitter.com/TheBrockEllis"><img src="twitter.png"></a>
+			</div>
+
+			<div class="contact-child">
+				<a href="https://www.github.com/TheBrockEllis"><img src="github.png"></a>
+			</div>
+
+			<div class="contact-child">
+				<a href="#"><img src="linkedin.png"></a>
+			</div>
+
+		</div>
+
+
+	</div>
+
+</body>
+</html>

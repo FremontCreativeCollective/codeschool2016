@@ -1,0 +1,121 @@
+#card {
+	width: 400px;
+	height:600px;
+	border: 20px solid #FFD720;
+	border-radius: 15px;
+	background: rgba(255,0,0, 0.5) url('background-2.png');
+	background-blend-mode: multiply;
+	font-size: 10px;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+.column {
+	width: 33%;
+	float: left;
+}
+
+.column-big {
+	width: 60%;
+}
+
+.column-small {
+	width: 20%;
+}
+
+#top {
+	margin-left: 20%;
+}
+
+#top p {
+	margin: 0;
+}
+
+#card-top-line {
+	border-bottom: 2px solid #FFD720;
+}
+
+#pokemon-name {
+	font-weight: bold;
+	font-size: 3em;
+}
+
+#pokemon-hp {
+	color: red;
+	font-size: 3em;
+	position: relative;
+	left: 50px;
+}
+
+#image {
+	border: 5px solid #FFD720;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#image img {
+	width: 100%;
+}
+
+#stats {
+	background-color: #FFD720;
+	width: 85%;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: bolder;
+	letter-spacing: 1.5px;
+	line-height: 16px;
+}
+
+#game-description {
+	width: 85%;
+	margin:0 auto;
+	line-spacing: 16px;
+}
+
+#game-description-title {
+	color: purple;
+	font-size: 1.3em;
+}
+
+#attack {
+	border-top: 2px solid #000;
+}
+
+#attack-description {
+	font-size: 1.3em;
+}
+
+#attack-description .title {
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+
+#attack-icons {
+	text-align: center;
+}
+
+#attack-icons img {
+	width: 25px;
+}
+
+#attack-points {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+#types {
+	text-align: center;
+	border-top: 2px solid #000;
+	clear: left;
+}
+
+.type-icon {
+	text-align: center;
+}
+
+.type_icon .column img {
+	width: 25px;
+}
+	

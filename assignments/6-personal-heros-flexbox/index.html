@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paragon Heroes</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Recreating the Paragon heroes list with CSS Flexbox">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<style>
+		body {
+			font-family: 'Maven Pro', sans-serif;
+			background-image: url('background.png');
+		}
+
+		#container {
+			width: 85%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+
+		.hero {
+			flex: 0 0 250px;
+			width: 100%;
+			height: 250px;
+			color: #f0f0f0;
+			margin-bottom: 15px;
+
+			/* Flipping */
+			transition: 0.5s ease-in-out;
+			transform-style: preserve-3d;
+			position: relative; /* but no offset specified */
+		}
+
+		.hero h1, .hero p {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 15px;
+		}
+
+		.front h1 {
+			font-size: 20px;
+			margin-top: 190px;
+		}
+
+		.front h1, .back .name {
+			color: goldenrod;
+		}
+
+		.front p {
+			font-size: 12px;
+		}
+
+		.front, .back {
+			backface-visibility: hidden;
+			position: absolute; /* Put them on top of each other */
+			top: 0px;
+			left: 0px;
+			height: 250px;
+			width: 100%;
+		}
+
+		.front {
+			background-size: contain;
+			transform: rotateY(0deg);
+		}
+
+		.back {
+			background-color: #d0d0d0;
+			transform: rotateY(180deg);
+			text-align: center;
+		}
+
+		.back p.name {
+			margin-top: 75px;
+		}
+
+		.hero:hover {
+			transform: rotateY(180deg);
+		}
+
+		.icons {
+			margin-top: 15px;
+			font-size: 24px;
+		}
+
+		.diamond {
+			transform: rotate(45deg);
+		}
+
+		.intellegence { color: #4E9258; }
+		.growth { color: #4863A0; }
+		.mighty { color: #C11B17; }
+		.chaos { color: #504A4B; }
+
+		#one .front { background-image: url('prometheus.png'); }
+		#two .front { background-image: url('jackiechan.png'); }
+		#three .front { background-image: url('ringwraith.png'); }
+		#four .front { background-image: url('knightstemplar.png'); }
+
+	</style>
+</head>
+<body>
+
+	<div id="container">
+
+		<div class="row">
+
+			<div class="hero" id="one">
+				<div class="front">
+					<h1>Prometheus</h1>
+					<p>World Maker</p>
+				</div>
+				<div class="back">
+					<p class="name">Prometheus</p>
+					<p>World Maker</p>
+					<div class="icons">
+						
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond intellegence"></i>
+						  <i class="fa fa-globe fa-stack-1x"></i>
+						</span>
+
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond mighty"></i>
+						  <i class="fa fa-wrench fa-stack-1x"></i>
+						</span>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="hero" id="two">
+				<div class="front">
+					<h1>Jackie Chan</h1>
+					<p>Martial Artist</p>
+				</div>
+				<div class="back">
+					<p class="name">Jackie Chan</p>
+					<p>Martial Artist</p>
+					<div class="icons">
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond chaos"></i>
+						  <i class="fa fa-hand-rock-o fa-stack-1x"></i>
+						</span>
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond mighty"></i>
+						  <i class="fa fa-shield fa-stack-1x"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero" id="three">
+				<div class="front">
+					<h1>Ringwraith</h1>
+					<p>Ex-King of Man</p>
+				</div>
+				<div class="back">
+					<p class="name">Ringwraith</p>
+					<p>Ex-King of Man</p>
+					<div class="icons">
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond growth"></i>
+						  <i class="fa fa-bank fa-stack-1x"></i>
+						</span>
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond intellegence"></i>
+						  <i class="fa fa-user-secret fa-stack-1x"></i>
+						</span> 
+					</div>
+				</div>
+			</div>
+
+			<div class="hero" id="four">
+				<div class="front">
+					<h1>Templar Knight</h1>
+					<p>Fighter of Holy Wars</p>
+				</div>
+				<div class="back">
+					<p class="name">Templar Knight</p>
+					<p>Fighter of Holy Wars</p>
+					<div class="icons">
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond growth"></i>
+						  <i class="fa fa-hand-paper-o fa-stack-1x"></i>
+						</span>
+						<span class="fa-stack">
+						  <i class="fa fa-square fa-stack-2x diamond chaos"></i>
+						  <i class="fa fa-bomb fa-stack-1x"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- ends the .row -->
+
+		<!-- more hero rows can go here -->
+
+	</div> <!-- ends #container -->
+
+
+</body>
+</html>

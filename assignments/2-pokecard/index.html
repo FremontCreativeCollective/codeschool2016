@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Charizard </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Recreating a Pokemon card with HTML and CSS">
+	<link href="pokecard.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="card">
+		<div id="top">
+			<p id="card-top-line">
+				Evolves from Charmeleon Put Charizard on the Stage 1 card
+			</p>
+			<p>
+				<span id="pokemon-name">Charizard</span>
+				<span id="pokemon-hp">120 HP</span>
+			</p>
+		</div>
+
+		<div id="image">
+			<img src="charizard.png">
+		</div>
+
+		<div id="stats">
+			<p>Flame Pokemon. Length: 5' 7", Weight: 200lbs</p>
+		</div>
+
+		<div id="game-description">
+			<p><span id="game-description-title">Pokemon Power: Energy Burn</span>As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into ICON energy for the rets of the turn. This power can't be used if Charizard is Alseep, Confused, or Paralyzed.</p>
+		</div>
+
+		<div id="attack">
+			<div class="column column-small" id="attack-icons">
+				<img src="fire_icon.png">
+				<img src="fire_icon.png">
+				<br>
+				<img src="fire_icon.png">
+				<img src="fire_icon.png">
+			</div>
+			<div class="column column-big" id="attack-description">
+				<span class="title">Fire Spin</span> Discard 2 Energy cards attached to Charizard in order to use this attack.
+			</div>
+			<div class="column column-small" id="attack-points">
+				100
+			</div>
+		</div>
+
+		<div id="types">
+			<div class="column">
+				weakness
+				<br>
+				<img class="type_icon" src="water_icon.png">
+			</div>
+			<div class="column">
+				resistence
+				<br>
+				<img class="type_icon" src="fist_icon.png">
+			</div>
+			<div class="column">
+				retreat cost <br> [icons]
+			</div>
+		</div>
+
+		<div id="short-description">
+			<p>Spits fire hot enough to melt bolders. Known to unintentionally cause forest fires.</p>
+		</div>
+
+		<div id="credits">
+			<p>Illus. Mitushiro Arita C1995,96, 98 Nintendo Creations, GAMEFREAK, C 1999 Wizards 4/102</p>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

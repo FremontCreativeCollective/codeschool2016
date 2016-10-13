@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Movie Poster</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Recreating a movie poster with CSS Flexbox">
+	<style>
+		#poster {
+			width: 400px;
+			height: 590px;
+
+			color: white;
+			text-align: center;
+			font-size: 24px;
+			font-family: sans-serif;
+
+			background-image: url('background.jpg');
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+
+		#release-date {
+			font-size: .8em;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="poster">
+
+		<div class="child" id="teaser">Trying to find a new home for humanity....</div> <!-- teaser -->
+		<div class="child" id="logo"> <!-- logo -->
+			<img src="logo.png">
+		</div> 
+		<div class="child" id="release-date">
+			March 2017
+		</div> <!-- release date -->
+
+	</div>
+
+</body>
+</html>

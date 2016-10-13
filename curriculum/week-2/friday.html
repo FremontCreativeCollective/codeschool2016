@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friday - CSS IMPORTS and SELECTORS</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Introducing basic CSS properties and styles">
+
+	<link href="friday.css" rel="stylesheet">
+
+	<!-- For Tuesday: 
+		- Add external CSS file to pokemon add form
+		- Use a class, a tag and an ID to add style
+
+		body {
+			background-color: blue;
+			color: white;
+		}
+
+		(<input type="text" class="text_input">)
+		.text_input {
+			color: red;
+		}
+
+		(<select name="pokemon_type" id="type">)
+		#type {
+			font-size: 15px;
+		}
+	-->
+
+	<style>
+		.socks {
+			font-size: 54px;
+			color: purple;
+		}
+
+		#window {
+			font-size: 12px;
+		}
+
+		.added {
+			transform: rotate(180deg);
+		}
+
+
+	</style>
+</head>
+<body>
+
+<!-- 
+	3 Ways to get CSS into our page
+	- Inline: <p style="property:value;">
+	- Internal: <style> in the <head>
+	- External: <link> in the <head>
+ -->
+
+	<p class="socks">
+		This paragraph has a <span>bunch</span> of text, ya know?!
+	</p>
+
+	<p class="socks multiple classes added here" id="window">
+		Eeeeaaaaaggggggllllllleeeeee! Eagle. Hide the Saltine.
+	</p>
+
+	<p class="socks">
+		This is some awesome blossom textual things!
+	</p>
+
+</body>
+</html>
