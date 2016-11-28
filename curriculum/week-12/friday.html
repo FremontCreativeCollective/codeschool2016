@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Friday - Week 12 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Review objects, properties and methods">
+</head>
+<body>
+	<h1>Friday</h1>
+
+	<iframe width="640" height="360" src="https://www.youtube.com/embed/kfVsfOSbJY0?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+
+	<script>
+		/* variables attached to objects are called properties */
+		/* functions attached to objects are called methods */
+		
+		var bathroom = {
+			public: true,
+			stalls: [
+				{warm_seat: true, toilet_paper: true, clean_value: 7},
+				{warm_seat: false, toilet_paper: false, clean_value: 2},
+				{warm_seat: false, toilet_paper: true, clean_value: 10}
+			],
+			location: "321 Main Street, New York, New York 11221",
+			clean: function(){
+				var clean_score = 0;
+
+				for(var i = 0; i < bathroom.stalls.length; i++){
+					var stall = bathroom.stalls[i];
+					clean_score = clean_score + stall.clean_value;
+				}
+
+				if(clean_score > 15){
+					document.write("<p>Too clean, don't have to do anything!</p>");
+				} else { 
+					document.write("<p>It naaaaaasty. Must clean.</p>");
+				}
+			},
+			destroy: function(){
+				var random = Math.floor(Math.random() * 3);
+
+				var stall = bathroom.stalls[random];
+				stall.warm_seat = true;
+				stall.toilet_paper = false;
+				stall.clean_value--;
+			}
+		} 
+
+		bathroom.clean();
+		bathroom.destroy();
+		bathroom.destroy();
+		bathroom.destroy();
+		bathroom.destroy();
+		bathroom.clean();
+
+		// var clean_score = 0;
+		// for(var i = 0; i < bathroom.stalls.length; i++){
+		// 	var stall = bathroom.stalls[i];
+
+		// 	document.write("<p>This stall has a clean value of " + stall.clean_value + "</p>")
+
+		// 	clean_score = clean_score + stall.clean_value;
+		// }
+		// console.log("The clean score for this bathroom is " + clean_score);
+
+		// if(clean_score > 15){
+		// 	console.log("Too clean, don't have to do anything!");
+		// } else { 
+		// 	console.log("It naaaaaasty. Must clean.");
+		// }
+
+		// var clean_stall = bathroom.stalls[2];
+		// clean_stall.warm_seat = true;
+		// clean_stall.toilet_paper = false;
+		// clean_stall.clean_value = 6;
+
+		// console.log(bathroom);
+
+		// bathroom.clean();
+
+
+
+	</script>
+
+</body>
+</html>

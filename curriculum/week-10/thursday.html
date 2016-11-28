@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thursday - Week 10</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Review variables, conditionals and loops and MATH">
+</head>
+<body>
+	<h1>Childish Gambino</h1>
+
+	<script>
+		var rapper_name = prompt("Yo, what's yo name?");
+		var current_year = 2016;
+
+		if(rapper_name == "tupac"){
+
+			if(current_year > 1996){
+				console.log("You're supposed to be dead!");	
+			} else if(current_year < 1971){
+				console.log("Tupac is the dumbest name ever.");
+			} else if(current_year == 1996){
+				console.log("ME AGAINST THE WORLD is the greatest rap album of all time!!!!");
+			} else {
+				console.log("GREATEST GANGSTA EVER IN THE HOUSE!");
+			}
+			
+			//loop through Grammy nominations
+			// var i = 0;
+			// while(i < 6){
+			// 	document.write("<p>This is a paragraph for a Grammy you should have won!</p>");
+			// 	i++;
+			// }
+
+			for(var i = 0; i < 6; i++){
+				document.write("<p>This is a paragraph for a Grammy you should have won!</p>");
+			}
+
+		} else {
+			console.log("It's your turn on stage!");
+		}
+
+		/***** ^ review ***** v new stuff *****/
+
+		//Addition
+		var apples = 10;
+		var oranges = 43;
+		var applesAndOranges = apples + oranges;
+		console.log(applesAndOranges); // 53 as a saved result
+		console.log(apples + oranges); // 53 as a dynamic result
+
+		//Subtraction
+		var power_rangers = 7;
+		var megazord = 6;
+		var left_out_power_rangers = power_rangers - megazord;
+		console.log(left_out_power_rangers); // 1
+		console.log(power_rangers - megazord); // 1
+
+		//Multiplication
+		var happyMeals = 5;
+		var kids = 2;
+		var meals_eaten = happyMeals * kids;
+		console.log(meals_eaten); // 10
+		console.log(happyMeals * kids); // 10
+
+		//Division
+		var states = 50;
+		var candidates = 2;
+		var results = states / candidates;
+		console.log(results); // 25
+		console.log(states / candidates); // 25
+
+		//Modulus
+		var flour = 35;
+		var eggs = 15;
+		var messedUpCooking = flour % eggs;
+		console.log(messedUpCooking); // 5
+		console.log(flour % eggs); // 5
+
+		// Are these two numbers perfectly divisible?
+		var a = 16;
+		var b = 5;
+		if(a % b == 0){
+			console.log("Perfectly divisible");
+		}else{
+			console.log("We have a remainder!");
+		} 
+
+		// Please Excuse My Dear Aunt Sally
+		// Paren Exponent Multiplication Division Addition Substraction
+		var answer = 6 + 10 - 5 + (10 + 2) * 5 / 7;
+		console.log(answer); // 19.57
+
+
+
+		/*
+		* FizzBuzz
+		*
+		* Loop through numbers 0 to 100
+		* If a number is divisible by 3, print fizz
+		* If a number is divisible by 5, print buzz
+		* If divisible by 3 and 5, print fizzbuzz
+		* Otherwise, print the number
+		*/
+		var a = 3;
+		var b = 5;
+		
+		for(var i = 0; i < 100; i++){
+			
+ 			if( i % a == 0 && i % b == 0 ) {
+
+				console.log("fizzbuzz");	
+
+			} else if(i % a == 0){
+
+				console.log("fizz");
+
+			} else if(i % b == 0){
+
+				console.log("buzz");
+
+			} else {
+
+				console.log(i);
+			}
+
+		}
+
+
+
+
+	</script>
+</body>
+</html>

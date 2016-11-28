@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Friday - Week 11 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Reviewing arrays and loops, intro to functions">
+</head>
+<body>
+
+	<h1>WELCOME TO FRIDAY!</h1>
+
+	<script>
+
+		var companies = ["Microsoft", "Apple", "iBuyPower", "Gateway", "HP"];
+		//document.write("<p>" + companies[2] + "</p>");
+
+		for(var i = 0; i < companies.length; i++){
+			document.write("<p>" + companies[i] + "</p>");
+		}
+
+		/**** ^ Review **** v new stuff ****/
+
+		logLength(companies); // 5
+
+		companies.push("Sony");
+		logLength(companies); // 6
+
+		companies.pop();
+		logLength(companies); // 5
+
+		// CREATING A FUNCTION
+
+		function logLength(arrayToLog){
+			// "arrayToLog" is the local name for the data given to the function
+
+			// this code will run when the function is called
+			console.log( arrayToLog.length );
+		
+		}
+
+		// USING A FUNCTION
+
+		logLength(companies); // 5
+
+		var games = ["Gears of War", "Paragon", "Mass Effect"];
+
+		logLength(games); // 3
+
+		/****************************************/
+		// multiple arguments
+
+		function greeting(name, gender){
+
+			if(gender == "female"){
+				document.write("<p>Hello, m'lady</p>");
+			}else{
+				document.write("<p>Hey yo, whats up " + name + "?</p>");	
+			}
+
+		}
+
+		greeting("Brenda", "female");
+		greeting("Krul the warrior king", "male");
+
+		/*****************************************/
+		// return value
+
+		function drink(beverage){
+			if(beverage == "soda" || beverage == "pop"){
+				return "*burp*";
+			}else{
+				return "Yummmm";
+			}
+		}
+
+		var outcome1 = drink("pop");
+		var outcome2 = drink("water");
+
+		console.log(outcome1, outcome2);
+
+		function add(number1, number2){
+			return number1 + number2;
+		}
+
+		var sum = add(100, 2342342);
+
+		/******
+		1. [X] create an array of 5 things of your choice
+		2. [X] loop through the array
+		3. [X] for each item in the array, call a function that selects a random color
+		4. [X] use that color to print out the item on the screen
+		******/
+		var sodas = ["Mt. Dew", "Dr. Pepper", "Coke", "Mr. Pipp", "Sprite"];
+
+		for(i = 0; i < sodas.length; i++){
+			var color = randomColor(i);
+
+			document.write("<p style='color:" + color + ";'>" + sodas[i] + "</p>");			
+		}
+
+		function randomColor(index){
+			var colors = ["red", "yellow", "blue", "green", "teal"];
+			return colors[index];
+		}
+
+	</script>
+
+</body>
+</html>

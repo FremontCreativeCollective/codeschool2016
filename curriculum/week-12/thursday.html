@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Thursday - Week 12 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Reviewing basic objects and looking at methods">
+</head>
+<body>
+
+	<h1>Welcome to Thursday!</h1>
+
+	<script>
+		/* properties = variables inside of an object */
+		/* methods = function inside of an object */
+
+		var fighters = {
+			styles: ['kung fu', 'drunken boxing', 'krav maga', 'judo'],
+			most_popular: 'karate',
+			legal: false,
+			total_number: 1524857,
+			least_popular: {
+				name: 'wushu',
+				total_number: 3
+			},
+			punch: function(){
+				alert("I punch you in the face.");
+			}
+		} 
+
+		var obscure = fighters.least_popular.name;
+		document.write("<p> The least popular fighting style is " + obscure + "</p>");
+
+		fighters.total_number = 12;
+
+		console.log(fighters);
+
+		for(var i=0; i < fighters.styles.length; i++){
+			var style = fighters.styles[i];
+			document.write("<p>" + style + "</p>");
+		}
+
+		// creates the function
+		function batmanSound(){
+			alert("ZWAP!");
+		}
+
+		// uses the function
+		batmanSound();
+
+		// use the function inside of the fighters object
+		fighters.punch();
+
+	</script>
+
+</body>
+</html>

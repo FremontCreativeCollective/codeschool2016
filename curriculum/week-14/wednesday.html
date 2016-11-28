@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Wednesday - Week 14 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Audio!!">
+</head>
+<body>
+
+	<h1>Welcome to Wednesday Week 14</h1>
+	<h6>Thanksgiving is tomorrow</h6>
+
+	<img id="turkey_pic" src="http://freeclipartstore.com/Turkey%2010.gif">
+
+	<!-- audio tag can have many different sources which would be different audio file types -->
+	<audio id="turkey_sound">
+		<!-- src is the filepath to the file and type of the sound file type -->
+		<source src="turkeycall.mp3" type="audio/mpeg">
+	</audio>
+
+	<script>
+		// get references to 1. the image and 2. the sound file
+		var turkey_pic = document.getElementById("turkey_pic");
+		var turkey_sound = document.getElementById("turkey_sound");
+
+		// add click listener on the image
+		turkey_pic.addEventListener( "click", playSound );
+
+		// function that is responsible for playing the sound
+		function playSound(){
+			turkey_sound.play();
+		}
+		
+	</script>
+
+	<!--
+	1. [X] Display photo
+	2. [X] Embed audio file
+	3. [X] Attach listener to photo 
+	4. [ ] Play sound
+	-->
+
+</body>
+</html>

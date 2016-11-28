@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Week 11 - Wednesday </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Learning arrays">
+</head>
+<body>
+	<h1>Array</h1>
+	<p>Simply a collection of items.</p>
+	<p>An array can consist of: </p>
+	<ul>
+		<li>strings</li>
+		<li>numbers</li>
+		<li>booleans</li>
+		<li>objects</li> <!-- new --> 
+		<li>other arrays</li>
+	</ul>
+
+	<script>
+
+		// create an array with square brackets
+		var zombie_nicknames = ['walker', "roamers", 'biters']; 
+
+		// each item in the array has an INDEX which we can use to pull out a specific item
+		var biters = zombie_nicknames[2];
+
+		// INDEXES start counting at zero!!!
+
+		var suicide_squad = ["Deadshot", "Harley Quinn", "Diablo", "Captain Boomerang", "Entrantress", "Sword Lady"];
+
+		document.write(suicide_squad[3]); //should output "Captain Boomerang"
+
+		var squad_count = suicide_squad.length;
+		document.write("Number of items in the array: " + squad_count);
+
+		// Index count will ALWAYS be length - 1
+
+		// Adds item to the end of the array
+		suicide_squad.push("killer crock");
+
+		squad_count = suicide_squad.length;
+		document.write("Number of items in the array after PUSHING: " + squad_count);
+
+		// Removes item from the end of an array
+		suicide_squad.pop();
+
+		squad_count = suicide_squad.length;
+		document.write("Number of items in the array after POPPING: " + squad_count);
+
+	</script>
+</body>
+</html>

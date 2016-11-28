@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Object Game </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="">
+</head>
+<body>
+
+
+	<script>
+
+		var user = {
+			moves: 0,
+			alive: true,
+			direction: "",
+			prompt: function(){
+				// ask the user which direction they want to move
+				var direction = prompt("Which way do you move (left or right)?");
+			
+				// make sure it's a valid direction
+				if(direction == "left" || direction == "right"){
+					user.move(direction);
+				}else{
+					alert("BAD SELECTION!");
+					new_turn();
+				}
+			},
+			move: function(direction){
+				document.write("<p>You moved to the " + direction + "</p>");
+				user.direction = direction;
+				user.checkAlive();
+				end_turn();
+			},
+			checkAlive: function(){
+				if(user.direction == enemy.location){
+					user.alive = false;
+				}else{
+					user.alive = true;
+				}
+			}
+		} 
+
+		var enemy = {
+			locations: ["left", "right"],
+			location: "",
+			move: function(){
+				var random = rng(enemy.locations.length);
+				enemy.location = enemy.locations[random];
+				document.write("<p>The enemy is to the " + enemy.location + "</p>");
+			}
+		}
+
+		function rng(limit){
+			// create random number with given limit and save in a variable
+			var random = Math.floor(Math.random() * limit);
+
+			// return the random value back to what it was requested
+			return random;
+		}
+
+		function new_turn(){
+			enemy.move();
+			user.prompt();
+		}
+
+		function end_turn(){
+			if(user.alive){
+				document.write("<h1>You survived!</h1>");
+			}else{
+				document.write("<p>You have died</p>");
+			}
+		}
+
+		new_turn();
+
+	</script>
+
+</body>
+</html>

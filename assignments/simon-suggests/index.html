@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Simon Suggests </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="A slight copy of the old game simon">
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<h1>Simon Suggests</h1>
+	<p id="instructions">Click the highlighted colors as fast as you can!</p>
+
+	<div id="board">
+		<div class="square" id="red"></div> 
+		<div class="square" id="blue"></div> 
+		<div class="square" id="green"></div> 
+		<div class="square" id="yellow"></div> 
+	</div> 
+
+	<p id="streak">Current Streak: <span id="streakNumber">0</span></p>
+
+	<div id="gameOver">
+		<h1>Game Over!</h1>
+		<img src="http://www.relatably.com/m/img/sad-memes-images/a63.png">
+		<button id="playAgain">Play Again?</button>
+	</div>
+
+	<script src="javascript.js"></script>
+</body>
+</html>

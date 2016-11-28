@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Rude Calculator </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="">
+</head>
+<body>
+
+	<input type="text" id="number_one">
+	
+	<select id="math">
+		<option value="add">+</option>
+		<option value="subtract">-</option>
+		<option value="divide">/</option>
+		<option value="multiply">*</option>
+	</select>
+
+	<input type="text" id="number_two">
+
+	=
+
+	<input type="number" id="result_box" readonly>
+
+	<script>
+		// grab a reference to the numbers text boxes
+		var number_one = document.getElementById("number_one");
+		var number_two = document.getElementById("number_two");
+
+		// grab a reference to the result textbox
+		var result_box = document.getElementById("result_box");
+
+		// grab reference to the math select box
+		var math = document.getElementById("math");
+
+		// add our event listeners so we can do stuff when things change
+		number_one.addEventListener("input", doMath);
+		number_two.addEventListener("input", doMath);
+		math.addEventListener("change", doMath);
+
+		// this function will run anytime text is entered or a math type is selected
+		function doMath(){
+			
+			// make sure they are numbers and store values in new variables
+			var one = parseInt(number_one.value) || 0;
+			var two = parseInt(number_two.value) || 0;
+
+			// find out what type of math we're doing
+			var operation = math.options[math.selectedIndex].value;
+
+			// declare the result variable, but leave it empty for now
+			var result;
+
+			if(operation == "add"){
+				result = one + two;
+			}else if(operation == "subtract"){
+				result = one - two;
+			}else if(operation == "multiply"){ 
+				result = one * two;
+			}else if(operation == "divide"){
+				result = one / two;
+			}
+
+			// update the screen for the user!
+			result_box.value = result;
+		} 
+
+	</script>
+
+</body>
+</html>

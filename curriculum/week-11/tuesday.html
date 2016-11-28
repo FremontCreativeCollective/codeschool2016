@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Tuesday - Week 11 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Variable/Looping/conditional assignment">
+</head>
+<body>
+
+	<h1> Announcements?!?!?!? </h1>
+
+	<script>
+		for(var i = 0; i < 5; i++){
+
+			//1. init - where should we start counting at?
+			//2. condition - should we keep going?
+			//3. final expression - what should happen at the very end of the loop?
+
+			document.write("<p>This is the current loop number: " + i + "!</p>");
+		}
+
+		var shorts; // will be a boolean
+		var date = "nov";
+
+		if(date == "oct" || date == "sept" || date == "aug"){
+			shorts = true;
+		} else {
+			shorts = false;
+		}		
+
+		/*
+		* if ( condition is true ) { this will happen } else { this will happen }
+		*/
+
+		if(shorts){
+			document.write("<h1>I CAN WEAR SHORTS!</h1>");
+		} else { 
+			document.write("<h1>I must wear pants. Fml.</h1>");
+		}
+
+	</script>
+
+	<!--
+		Assignment: Variables, Looping and Conditionals
+
+		1. [ ] Use an external javascript file 
+		2. [ ] Create variable "noise" and set it equal to "woof"
+		3. [ ] Use a for() loop that runs 42 times
+		4. [ ] Inside of the for() loop, check to see if "noise" is equal to "woof"
+		5. [ ] If noise is equal to woof
+			- [ ] write to the screen "It's a dog."
+			- [ ] set the "noise" variable equal to "meow"
+		6. [ ] If noise is not equal to woof, check to see if "noise" is equal to "meow"
+		7. [ ] If "noise" is equal to meow
+			- [ ] write to the screen "It's a cat."
+			- [ ] set the "noise" variable equal to "woof"
+		8. [ ] If "noise" is not woof or meow, print out "No animals here." to the screen
+
+		2 BONUS POINTS
+		- [ ] Create a new variable called "times" and set it equal to a prompt that asks the user how many times they want the loop to run
+		- [ ] Use the number that the user enters as the limit for the for() loop
+	-->
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wednesday - Week 10</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Javascript looping">
+</head>
+<body>
+	<h1>Welcome to The HYPERLOOP</h1>
+
+	<script>
+		var user_name = "John"; // String
+		var user_age = 17; // Number
+		var updating = true; // Boolean 
+
+		// If John is updating, we can't have class else we can have class.
+
+		// && is the same as saying "and"
+		if(user_name == "John" && updating == true){
+			//this code will run if updating is true
+			console.log("Boohiisss! We can't have class!");
+		} else {
+			console.log("Yay! We can do the class thing!");
+		}
+
+		/***** ^ REVIEW ******** V New Stuff ***************/
+
+		// While loop: simpler, not as robust, not used as often
+		var i = 0;
+		while(updating == true){
+			console.log("We're looping!", i);
+
+			if(i == 37){
+				updating = false;
+			} 
+
+			i++;
+		}
+
+		// For loop: more complex, flexible, used lots
+		//for(initialization, condition, increment){ }
+		for(var i = 0; updating == false; i++){
+			console.log("We're in a FOR loop", i);
+			if(i == 37){
+				updating = true;
+			}
+		}
+
+		/* Assignment to complete by Thursday
+		* - Use a for() loop to log out 99 Bottles of Beer on the wall
+		* - Use i = 99 and i-- to start high and decrease
+		* - Use console.log() to put the text in the browser
+		* - Use the + sign to glue together strings and variables
+		* - Use a temporary variable to store i - 1 for the last stanza in the song
+		*/
+
+	</script>
+</body>
+</html>

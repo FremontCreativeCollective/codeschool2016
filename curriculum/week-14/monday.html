@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Monday - Week 14 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Another array day">
+</head>
+<body>
+
+	<h1>Welcome to Monday week 14</h1>
+
+	<script>
+		var skyrim = ["daedric armor", "sword", "vampirism", "gold", "sweetroll"];
+
+		// three built-in functions that arrays have
+		document.write("<p>" + skyrim.length + "</p>");
+
+		skyrim.push("turnip");
+		document.write("<p>" + skyrim.length + "</p>");
+
+		skyrim.pop();
+		document.write("<p>" + skyrim.length + "</p>");
+
+		for(var i = 0; i < skyrim.length; i++){
+			var item = skyrim[i];
+
+			if(item == "sweetroll"){
+				document.write("<p>Found sweetroll!</p>");
+			}else{
+				document.write("<p>Just a " + item + "</p>");
+			}
+		}
+
+		// will return back "4" because that's the index of sweetroll
+		document.write( skyrim.indexOf("sweetroll") );
+
+		// will return -1 because butter is not present in the array
+		document.write( skyrim.indexOf("butter") );
+
+		// If the array contains the string "sweetroll", print to the screen "I love sweetroll, nom nom nom"
+		// Else print to the screen "You die of hunger"
+
+		// hint: indexOf() will return back -1 if the item is NOT in the array
+
+	</script>
+
+</body>
+</html>

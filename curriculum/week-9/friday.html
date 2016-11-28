@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friday - Intro to CSS Review</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Reviewing javascript basics and maybe getting to conditionals and arrays???!?!?!?!?">
+</head>
+<body>
+
+	<h1>Get out at 10:29am</h1>
+	<p>Please see note above</p>
+
+	<button onclick="location.reload()">Add Order</button>
+
+	<script>
+		var user_order = "#1 with cheese, diet coke"; //STRING 
+		var combo_number = 1; //NUMBER
+		var super_size = false; //BOOLEAN
+
+		user_order = prompt("What can I get you today?");
+		super_size = confirm("Would you like that supersized?");
+		console.log(super_size);
+
+		// = is the assignment operator (giving a value)
+		// == is the equality operator (checking if two values are the same)
+
+		if(user_order == "cheeseburger") {
+			console.log("Sorry, we ran out of cheese.");
+		} else {
+
+			var response = "Let me repeat your order back to you: ";
+
+			if(super_size == true){
+				response = response + "a super sized " + user_order;
+			} else {
+				response = response + user_order;
+			}
+
+			console.log(response);
+		}
+
+		/* This was a request by the students. DO NOT RUN */
+		// var counter = 0;
+		// while(true){
+		// 	//code to run if true
+		// 	console.log("Brinin' down the house " + counter);
+		// 	counter = counter + 1;
+		// }		
+
+	</script>
+</body>
+</html>

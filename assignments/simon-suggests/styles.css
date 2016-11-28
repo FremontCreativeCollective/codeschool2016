@@ -1,0 +1,78 @@
+body {
+	background-color: #f0f0f0;
+	text-shadow: 3px 3px #d0d0d0;
+	font-family: 'Coiny', cursive;
+}
+
+h1 {
+	text-align: center;
+	margin: 25px 0px 0px 0px;
+	font-size: 3em;
+}
+
+#instructions {
+	text-align:center;
+	margin-bottom: 25px;
+}
+
+#board {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.square {
+	flex: 0 0 200px;
+	width: 200px;
+	height: 200px;
+}
+
+#red { background-color: #F37F7F; border-top-left-radius: 200px; }
+#blue { background-color: #8094DA; border-top-right-radius: 200px;  }
+#green { background-color: #6EC470; border-bottom-left-radius: 200px;  }
+#yellow { background-color: #DADF6C; border-bottom-right-radius: 200px; }
+
+.targeted#red { background-color: #EE0000; }
+.targeted#blue { background-color: #003AFD; }
+.targeted#green { background-color: #00FF08; }
+.targeted#yellow { background-color: #F4FF00; }
+
+#streak {
+	margin-left: 25%;
+}
+
+#gameOver {
+	display: none;
+	position: absolute;
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+	width: 400px;
+	height: 400px;
+	margin:0 auto;
+	background-color: #000;
+	color: red;
+	border: 2px dashed #f0f0f0;
+	text-align: center;
+}
+
+img {
+	display: block;
+	height: 100px;
+	margin: 0 auto;
+}
+
+button {
+	width: 50%;
+	height: 75px;
+	background-color: green;
+	color: #FFF;
+	text-shadow: 2px 5px #000;
+	border: 4px solid #FFF;
+	margin-top: 25px;
+	border-radius: 10px;
+	cursor: pointer;
+
+}

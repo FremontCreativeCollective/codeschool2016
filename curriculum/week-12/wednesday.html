@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Wednesday - Week 12 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Introduction to objects">
+
+	<style>
+		body {
+			font-size: 64px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Welcome to Wednesday!</h1>
+
+	<script>
+		
+		// var string = "String";
+		// var boolean = true;
+		// var number = 45;
+
+		// var array = ["Can", "contain", 45, true];
+		// array[2]; // should return 45
+
+		// // THIS IS AN OBJECT! Woot woot!
+		// var shoe = { size: 14, brand: "Nike", in_stock: true };
+		// shoe.brand; // should return "Nike"
+		// shoe.in_stock; // should return true
+		// shoe.size // should return 14
+
+		// shoe.in_stock = false; // shoe.in_stock should be false
+		// shoe.in_stock; // should return false
+
+		var taco_bell = {
+			employees: 20,
+			established: 2005,
+			type: "Tex-mex",
+			menu: ["Hardshell taco", "softshell taco", "cheesey gordida crunch"]
+		}
+
+		log(taco_bell.established);
+
+		taco_bell.employees = 2;
+		console.log(taco_bell);
+
+		function log(text){
+			console.log(text);
+		}
+
+	</script>
+
+	<!--
+	Assignment: Object basics (6 points)
+
+	1. [ ] Create an object of your favorite thing: a game, a place, a person
+	2. That object must have:
+	 [ ] 3 properties that are strings
+	 [ ] 1 property that is an array
+	 [ ] 1 property that is a boolean and
+	3. [ ] In code, update one value on the object using dot notation
+	4. [ ] console.log() the entire object at the end of the file
+	-->
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Thursday - Week 11 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Arrays with loops and maybe functions">
+
+	<style>
+		table {`
+			width: 100%;
+			color: red;
+			border-collapse: collapse;
+		}
+
+		tr, td {
+			border: 1px solid #000;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Scientific Terms</h1>
+
+	<script>
+		var terms = ['negative', 'positive', 'polarity', 'mass', 'nomenclature', 'refraction'];
+
+		//document.write("<p>" + terms[4] + "</p>"); //outputs nomenclature on screen
+
+		console.log( terms.length ); //should be "5"
+
+		terms.push("volume");
+		console.log(terms.length); //should be "6"
+
+		terms.pop();
+		console.log(terms.length); //should be "5"
+	</script>
+
+	<ul>
+	<script>
+		for(var i = 0; i < terms.length; i++){
+			document.write("<li>" + terms[i] + "</li>")
+		}
+	</script>
+	</ul>
+
+	<script>
+		var colors = ['red', 'orange', 'blue', 'maroon', 'aqua', 'yellow'];
+
+		for(var i = 0; i < colors.length; i++){
+			var color = colors[i];
+
+			document.write("<p style='color:" + color + ";'> This is a test! </p>");
+		}
+
+
+		var definitions = ['having a value less than 0', 'having a value greater than 0', 'having a pole', 'it\'s like weight', 'naming things', 'bending things'];
+
+		document.write("<table>");
+
+		for(var i = 0; i < terms.length; i++){
+			var term = terms[i];
+			var definition = definitions[i];
+
+			document.write("<tr>");
+			document.write("<td>" + term + "</td>");
+			document.write("<td>" + definition + "</td>");
+			document.write("</tr>");
+		}
+
+		document.write("</table>");
+
+	</script>
+
+</body>
+</html>

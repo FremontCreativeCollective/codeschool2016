@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Magic 8 Ball </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Magic 8 Ball yo">
+	<link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+	<h1>The semi-magic 8 ball</h1>
+
+	<div id="ball">
+		<h1 id="eight">8</h1>
+	</div>
+
+	<div id="outcome">
+	</div>
+
+	<script>
+
+		var intervalId; 
+		var outcomes = [
+			"The future is cloudy.",
+			"Absolutely.",
+			"Without question.",
+			"Ask again later.",
+			"Please try again.",
+			"No way.",
+			"Hahahahaha",
+			"Please get real.",
+			"Trump is going to be president..."
+		];
+
+		document.getElementById("ball").addEventListener("click", ask);
+
+		// this function clears any previous answer from the screen and then
+		// gets the ball moving and queues the answer to appear late
+		function ask(){
+			// clear out any previous outcomes
+			document.getElementById('outcome').innerHTML = "";
+
+			// init's the shaking
+			shake();
+
+			// set the answer to update on the screen in 2 seconds (after shaking things)
+			setTimeout(answer, 2000);
+		}
+
+		// this function sets up the movement for the ball, but doesn't actually move it
+		// it also is in charge of determining when the ball will stop shaking
+		function shake(){
+			intervalId = setInterval(move, 200);
+			setTimeout(cancelInterval, 2000);
+		}
+
+		// this function is responsibile for moving the ball around the screen
+		function move(){
+			var move = Math.floor(Math.random() * 100);
+			if(move % 2 == 0) move = -move;
+
+			document.getElementById("ball").style.marginTop = move + "px";		
+		}
+
+		// stops the ball from shaking and resets the marginTop to original value
+		function cancelInterval(){
+			clearInterval(intervalId);
+			document.getElementById("ball").style.marginTop = "25px";
+		}
+
+		// finds a random answer from the outcomes[] array and displays it
+		function answer(){
+			// create random number
+			var rand = Math.floor(Math.random() * outcomes.length);
+			
+			// pull one random outcome out from the array
+			var outcome = outcomes[rand];
+
+			document.getElementById('outcome').innerHTML = outcome;
+		}
+
+	</script>
+
+</body>
+</html>

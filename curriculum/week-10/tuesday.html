@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 10 - Tuesday</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Review of variables, conditionals and prompt/alert/confirm">
+</head>
+<body>
+	
+	<h1>Welcome to Tuesday!</h1>
+
+	<script>
+		// prompt(); //asks the user for text import
+		// alert(); //asks the user acknowledge
+		// confirm(); //asks the user "is this right or not?"
+
+		var visitor = prompt("What is your name?"); //string = any collection of numbers, letters or symbols surrounded by quotes
+
+		var number_of_visitors = prompt("How many people are with you?");
+
+		console.log(visitor);
+		console.log(number_of_visitors);
+
+		// "10" <~~ a string
+		// 10 <~~ a number
+		// parseInt() attempts to get a number from a string
+
+		// var number = parseInt(number_of_visitors);
+
+		// if( isNaN(number) ){
+		// 	console.log("Number of visitors is NOT A NUMBER");
+		// }else{
+		// 	console.log("It is indeed a number");
+		// }
+
+		if(number_of_visitors >= 5){
+			console.log("Sorry. NO ROOM TO PARTAY!");
+		} else {
+			//let's welcome them!
+
+			// || is the same as "or"
+			// && is the same "and"
+
+			if(visitor == "Thor Odinson" && number_of_visitors == 3){
+				//if true, this will run
+				console.log("Well, let me lay down the red carpet!!!");
+			} else {
+				//if false, this will run
+				console.log("Oh, hey! What's up?!");
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Monday - Week 13 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Reviewing objects, properties, and methods">
+</head>
+<body>
+
+	<h1> Welcome to Monday! </h1>
+	<p> Dragonball Z roolz </p>
+
+	<img id="goku" src="goku_normal.jpg">
+
+	<script>
+
+		var goku = {
+			name: "Goku San",
+			race: "Sayian",
+			abilities: ["Spirit Bomb", "Teleport", "Solar Flare", "Kamehameha"],
+			dead: false,
+			power_level: 9000,
+			super_sayian: false,
+			friends: [
+				{name: "Tien", race: "Human"},
+				{name: "Piccolo", race: "Nemecian"},
+				{name: "Vegeta", race: "Sayian"}
+			],
+			power_up: function(){
+				goku.power_level = goku.power_level + 500;
+
+				if(goku.power_level >= 10000){
+					document.getElementById("goku").src = "goku_ss.png";
+					goku.super_sayian = true;
+				}else{
+					document.getElementById("goku").src = "goku_power_up.png";
+				}
+			},
+			power_down: function(){
+				goku.power_level = 9000;
+				goku.super_sayian = false;
+			}
+
+		} 
+
+		// console.log(goku); //should be 9k power_level and not a SS
+
+		// goku.power_up();
+		// goku.power_up();
+
+		// console.log(goku); // should be 10k power_level AND turned SS
+
+		// goku.power_down();
+
+		// console.log(goku); // should be 9k power_level and not a SS
+
+	</script>
+</body>
+</html>

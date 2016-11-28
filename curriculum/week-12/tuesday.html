@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Tuesday - Week 12 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Review loops, functions and arrays">
+</head>
+<body>
+
+	<h1> Welcome to Week 12</h1>
+
+	<script>
+
+		var loops = 0;
+		while(loops < 10){
+			console.log("WOOHOO we're looping!");
+
+			loops++;
+		}
+
+		for(var loops = 0; loops < 10; loops++){
+			console.log("Looping in a FOR LOOP");
+		}
+
+		/***/
+
+		var restaurants = ["Taco Bell", "Runza", "Wendy's", "Arby's", "Applebee's"];
+
+		document.write("<h1>" + restaurants[3] + "</h1>");
+
+		restaurants.push("Valentino's");
+		restaurants.pop();
+
+		restaurants.length
+
+		for(var i = 0; i < restaurants.length; i++){
+			//document.write("<p>" + restaurants[i] + "</p>");
+
+			var tempName = restaurants[i];
+			//var rating = rateRestaurant(tempName);
+		}
+
+		/***/
+
+		function rateRestaurant(name){
+			// generate random star value for the rating
+
+			// create an array of ratings so we can randomly pick one
+			var ratings = ["*", "**", "***", "****", "*****"];
+
+			// RNG = random number generator
+			var random = Math.floor(Math.random() * ratings.length);
+
+			// Use RNG to select a random rating from the ratings[] array
+			var rating = ratings[random];
+
+			document.write("<p>I rate " + name + " " + rating + " stars!</p>")
+			//return rating;
+		}
+
+		// PROJECT IDEA
+		// equalizer
+		// roll a dice
+		// 
+
+
+
+	</script>
+
+	<!-- Assignment
+	 	1. [ ] Create an array of your friends names
+	 	2. [ ] Loop through the array, using a for() loop
+	 	3. [ ] Inside of the loop, create a variable to hold a single friend and extract a single name from the array using bracket notation, i.e. friends[n]
+		4. [ ] Create a function called "getStatus()" that accepts a friend's name as an argument 
+		5. [ ] The function should check to see if the name is your BEST friends name
+			- If it is, return the string "best friend"
+			- If it is not, return the string "friend"
+		6. [ ] Inside of the loop, use the function you just created to get the status of the friend you're looping over and save the status in another temporarry variable
+		7. [ ] Write out the following string to the screen, filling in the blanks
+			- "__[friend's name]___ is your ____[status]____" 
+	-->
+
+</body>
+</html>
