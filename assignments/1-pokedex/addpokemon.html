@@ -1,107 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Pokedex - Add Pokemon</title>
-	<meta charset="utf-8">
-	<meta name="author" content="Brock Ellis">
-	<meta name="description" content="Adding a new pokemon to our dynamic JS/HTML pokedex">
+  <meta charset="utf-8">
+  <title>Pokedex - Add Pokemon</title>
+  <meta name="viewport" content="">
+  <meta name="author" content="Brock Ellis">
+  <meta name="description" content="Adding a new pokemon to our dynamic JS/HTML pokedex">
 </head>
 <body>
 
-	<h1>Add A New Pokemon</h1>
+  <h1>Add A New Pokemon</h1>
 
-	<form method="post" action="http://requestb.in/zvj5tszv">
+  <form method="post" action="http://requestb.in/zvj5tszv">
+  
+    <div>
+      Name: 
+      <select name="name">
+        <option value="001">Bulbasaur</option>
+        <option value="025">Pikachu</option>
+        <option value="150">Mew</option>
+        <option value="151">Mewto</option>
+      </select>
+    </div>
 
-	<p>
-		Name: 
-		<select name="name">
-			<option value="001">Bulbasaur</option>
-			<option value="025">Pikachu</option>
-			<option value="150">Mew</option>
-			<option value="151">Mewto</option>
-		</select>
-	</p>
+    <div> 
+      Nickname:
+      <input type="text" name="nickname">
+    </div>  
 
-	<p>
-		Nickname: 
-		<input type="text" name="nickname">
-	</p>	
+    <div>
+      Type:
+      <select name="type">
+        <option value="gush">Water</option>
+        <option value="zzzpt">Electric</option>
+        <option value="rawr">Dragon</option>
+        <option value="thud">Rock</option>
+      </select>
+    </div>
 
-	<p>
-		Type:
-		<select name="type">
-			<option value='gush'>Water</option>
-			<option value='zzzpt'>Electric</option>
-			<option value='rawr'>Dragon</option>
-			<option value='thud'>Rock</option>
-		</select>
-	</p>
+    <div>
+      Weakness:
+      <select name="weakness">
+        <option value="ouchie">Poison</option>
+        <option value="oooooo">Ghost</option>
+        <option value="leaf">Grass</option>
+        <option value="UPPERCUT!">Fighting</option>
+      </select>
+    </div>
 
-	<p>
-		Weakness:
-		<select name="weakness">
-			<option value='ouchie'>Poison</option>
-			<option value='oooooo'>Ghost</option>
-			<option value='leaf'>Grass</option>
-			<option value='UPPERCUT!'>Fighting</option>
-		</select>
-	</p>
+    <div>
+      Abilities:
+      <select name="abilities">
+        <option value="">Choose one...</option>
+      </select>
+    </div>
 
-	<p>
-		Abilities:
-		<select name="abilities">
-			<option value="">Choose one...</option>
-		</select>
-	</p>
+    <div>
+      <input type="radio" name="gender" value="m"> Male
+      <br>
+      <input type="radio" name="gender" value="f"> Female
+      <br>
+      <input type="radio" name="gender" value="u"> Unknown
+    </div>
+    
+    <div>
+      Moves:
 
-	<p>
-		<input type="radio" name="gender" value="m"> Male
-		<br>
-		<input type="radio" name="gender" value="f"> Female
-		<br>
-		<input type="radio" name="gender" value="u"> Unknown
-	</p>
-	
-	<p>
-		Moves:
+      <table>
+        <tr>
+          <th>Move Name</th>
+          <th>Damage</th>
+          <th>PP</th>
+        </tr>
 
-		<table>
-			<tr>
-				<th>Move Name</th>
-				<th>Damage</th>
-				<th>PP</th>
-			</tr>
+        <tr>
+          <td>
+            <input type="text" name="move_1">
+          </td>
+          <td>
+            <input type="number" name="dmg_1" min="0">
+          </td>
+          <td>
+            <input type="number" name="pp_1" min="0" max="50">
+          </td>
+        </tr>
 
-			<tr>
-				<td><input type="text" name="move_1"></td>
-				<td><input type="number" name="dmg_1" min="0"></td>
-				<td><input type="number" name="pp_1" min="0" max="50"></td>
-			</tr>
+        <tr>
+          <td>
+            <input type="text" name="move_2">
+          </td>
+          <td>
+            <input type="number" name="dmg_2" min="0">
+          </td>
+          <td>
+            <input type="number" name="pp_2" min="0" max="50">
+          </td>
+        </tr>
 
-			<tr>
-				<td><input type="text" name="move_2"></td>
-				<td><input type="number" name="dmg_2" min="0"></td>
-				<td><input type="number" name="pp_2" min="0" max="50"></td>
-			</tr>
+        <tr>
+          <td>
+            <input type="text" name="move_3">
+          </td>
+          <td>
+            <input type="number" name="dmg_3" min="0">
+          </td>
+          <td>
+            <input type="number" name="pp_3" min="0" max="50">
+          </td>
+        </tr>
 
-			<tr>
-				<td><input type="text" name="move_3"></td>
-				<td><input type="number" name="dmg_3" min="0"></td>
-				<td><input type="number" name="pp_3" min="0" max="50"></td>
-			</tr>
+        <tr>
+          <td>
+            <input type="text" name="move_4">
+          </td>
+          <td>
+            <input type="number" name="dmg_4" min="0">
+          </td>
+          <td>
+            <input type="number" name="pp_4" min="0" max="50">
+          </td>
+        </tr>
 
-			<tr>
-				<td><input type="text" name="move_4"></td>
-				<td><input type="number" name="dmg_4" min="0"></td>
-				<td><input type="number" name="pp_4" min="0" max="50"></td>
-			</tr>
+      </table>
 
-		</table>
+    </div>
 
-	</p>
-
-	<input type="submit" value="Add Pokemon">
-	</form>
+    <input type="submit" value="Add Pokemon">
+  </form>
 
 </body>
 </html>

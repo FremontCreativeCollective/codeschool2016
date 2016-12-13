@@ -1,0 +1,33 @@
+repo: pokedex
+canvasCourse: web-dev-1
+
+naming: true
+liveWebsite: true
+restrictFileTypes: true
+#bestPractices: true
+
+# Other tests, described below, would go here
+git:
+
+  # Force the students to make sure all their files are committed.
+  allCommitted: true
+  # Force the students to make sure all their files are pushed & synced.
+  allSynced: true
+  
+allFiles:
+
+  html:
+    valid: true
+    bestPractices: true
+    has:
+      - ['title', 'Got to have a title on the page!']
+      - ['body', 'It is not a website without a body!']
+    hasNot:
+      - ['br', 'If you are using hard line breaks, you can probably use margin to accomplish the same thing...']
+      - ['hr', 'The `hr` tag should not be used to create borders']
+  
+html:
+  - path: index.html
+    has:
+      - ['h1', 'Must have a h1 element!']
+      - ['h2', 'Must have an h2 element']

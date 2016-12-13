@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<!--
+	1. Background: http://umad.com/img/2015/9/toy-story-clouds-wallpaper-background-3859-4067-hd-wallpapers.jpg
+	2. Buzz: http://i.imgur.com/VoB11N0.png
+	3. Alien: http://i.imgur.com/EQnrGgR.png
+	4. Woody: http://i.imgur.com/MeEgMcl.png
+-->
+    <STYLE>	
+		body {
+			background-image: url('http://tinyurl.com/FMS-HOC-1');
+			background-size: contain;
+			overflow: hidden;
+			user-select: none;
+		}
+        
+        .targets {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+        }
+        
+        #score {
+            text-align: center;
+            font-size: 64px;
+            color: red;
+        }
+    </STYLE>
+</HEAD>
+<BODY>
+
+<div id="score">0</div>
+
+<img class="targets" src="http://tinyurl.com/FMS-HOC-2">
+<img class="targets" src="http://tinyurl.com/FMS-HOC-3">
+<img class="targets" src="http://tinyurl.com/FMS-HOC-4">
+
+
+<SCRIPT>
+
+var display_score = document.getElementById("score");
+var targets = document.getElementsByClassName('targets');
+var score = 0
+
+document.onload = start();
+
+function start(){
+	for(var i = 0; i < targets.length; i++){
+		var target = targets[i];
+	
+		target.addEventListener("click", addPoints);
+	}
+
+    move();
+    setInterval(move, 1000);
+}
+ 
+function move(){
+	for(var i = 0; i < targets.length; i++){
+		var target = targets[i];
+	
+		var top = Math.floor(Math.random() * 101) + "%";
+		var left = Math.floor(Math.random() * 101) + "%";
+		
+		target.style.top = top;
+		target.style.left = left;
+	}
+}
+
+function addPoints(event){	
+	// add together the score on the screen and what they just got
+	var new_score = score + 10;
+		
+	// save the new score to be used next time
+	score = new_score
+		
+	// update the page
+	display_score.innerHTML = score;
+}
+
+</SCRIPT>
+
+</BODY>
+</HTML>

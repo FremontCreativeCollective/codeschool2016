@@ -1,0 +1,36 @@
+/* 	For the element with the ID of card:
+	[ ] width = 600px
+	[ ] height = 400px
+	[ ] absolutely positioned in the top, left hand corner
+	[ ] background color 
+*/
+
+#card {
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-image: url("background.jpg");
+	overflow: hidden;
+	user-select: none;
+	font-size: 2em;
+	text-align: center;
+	color: #FFF;
+	text-shadow: 4px 4px 2px #007FFF;
+	font-family: 'Lobster', Sans-Serif; /* <~~ custom font goodness */
+}
+
+h1 {
+	position: relative;
+	z-index: 1;
+}
+
+p {
+	z-index: 1;
+	margin: 0px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	
+}

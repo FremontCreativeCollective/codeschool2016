@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monday/Tuesday - Week 15</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Woah. Turkey day was a blast. Time for some review!">
+	<style>
+		#cereal_list {
+			width: 400px;
+			height: 400px;
+			background-color: red;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+	</style>
+</head>
+<body>
+
+	<!--
+		[X] Conditionals/for
+		[X] Array
+		[X] Functions
+		[ ] Random numbers
+		[X] DOM manipulation (getElementById)
+		[X] Events
+	-->
+	
+	<input type="text" id="new_cereal">
+	
+	<div id="cereal_list">
+	
+	</div>
+	
+	<script>
+	
+		// write a for() loop that count from 0 to 10
+		// if the number is 7, print to the screen "My favorite number is 7!"
+		// else just print the number
+		for(var i = 1; i < 11; i++){
+		
+			if(i == 7){
+				document.write("<p>My favorite number is 7!</p>");
+			}else{
+				document.write("<p>" + i + "</p>");
+			}
+			
+		}
+		
+		var cereals = ["Life", "Raisin Bran Crunch", "Rice Crispies"];
+		
+		print_cereals();
+		
+		cereals.push("Frosted Mini Wheats");
+		
+		print_cereals();
+		
+		cereals.pop();
+
+		print_cereals();
+		
+		function print_cereals(){
+			// loop through cereals array and print each name to the page
+			for(var i = 0; i < cereals.length; i++){
+				var cereal = cereals[i];
+			
+				document.write("<p>" + cereal + "</p>");
+			}
+		}		
+	
+		var cereal_input = document.getElementById("new_cereal");
+		var cereal_list = document.getElementById("cereal_list");
+		
+		cereal_input.addEventListener("keydown", addCereal);
+		
+		function addCereal(event){
+			console.log(event);
+			
+			// short-circuit the function and STAPH right there
+			if(event.keyCode != 13) return;
+			
+			// if we get here, that means the enter key was pressed! :D
+			var new_cereal = cereal_input.value;
+			
+			cereals.push(new_cereal);
+			
+			console.log(cereals); 
+			// input -> "life" and "mini wheats"
+			// output -> ["Life", "Raisin Bran Crunch", "Rice Crispies", "life", "mini wheats"]
+				
+			cereal_input.value = "";
+			displayCereals();
+		}
+		
+		function displayCereals(){
+			// clear out the list before we add the new stuff
+			cereal_list.innerHTML = "";
+		
+			// loop through the cereals in the array
+			for(var i = 0; i < cereals.length; i++){
+				// create a temporary variable for a single cereal
+				var cereal_name = cereals[i];
+				
+				// append it to the cereal_list div
+				cereal_list.innerHTML += "<p>" + cereal_name + "</p>";
+			}
+		}
+		
+		// This will run when the page loads to populate the list 
+		displayCereals();
+	</script>
+
+</body>
+</html>

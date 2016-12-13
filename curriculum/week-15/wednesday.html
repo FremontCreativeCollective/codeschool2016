@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Wednesday - Week 15 </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Introduction to Cheat Codes!">
+</head>
+<body>
+
+	<script>
+		// keep track of what the cheat code actually is
+		var cheat = [66, 82, 79, 67, 75]; // b, r, o, c, k
+		
+		// keep track of what the user has entered
+		var userKeypresses = [];
+		
+		document.addEventListener("keydown", processKeydown);
+		
+		function processKeydown(event){
+			var keycode = event.keyCode;
+			console.log(keycode);
+			userKeypresses.push(keycode);
+			
+			// assume the cheat is successful until we hear otherwise
+			var validCheat = true; 
+			
+			for(var i = 0; i < cheat.length; i++){
+				var cheatKeycode = cheat[i];
+				var userKeypressesKeycode = userKeypresses[i]; 
+
+				if(userKeypressesKeycode != cheatKeycode){
+					validCheat = false;
+				}
+			}
+			
+			if(validCheat == true){
+				console.log("Doing our cheat!");
+				doCheat();
+			}else{
+				console.log("Invalid cheat");
+			}
+			
+		}
+		
+		function doCheat(){
+			// getElementById = #id, #content, #main
+			// getElementsByTagName = body, p, h2
+		
+			// getElementsByTagName returns an array of elements, even if there is just one on the page
+			var htmlBody = document.getElementsByTagName('body')[0];
+			
+			htmlBody.style.backgroundColor = "red";
+		}
+	
+	
+	</script>
+
+</body>
+</html>
