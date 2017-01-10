@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+}
+
+#game {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/25/87/79/2587797ce20989882470aaccacac6f20.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.damage {
+  background: linear-gradient(
+        rgba(255, 0, 0, 0.65), 
+        rgba(255, 0, 0, 0.65)
+  ) !important;
+}
+
+h1 {
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  color: blue;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#container {
+  position: absolute;
+  width: 2vw;
+  height: 60vh;
+  top: 20vh;
+  left: calc(50% - 1vw);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s;
+}
+
+#container.defendLeft {
+  transform: rotate(-120deg);
+}
+
+#container.defendRight {
+  transform: rotate(120deg);
+}
+
+#container.defendBottom {
+  transform: rotate(195deg);
+}
+
+#saber {
+  align-self: center;
+  margin-top: 45vh;
+	background: linear-gradient(to right, rgba(55,132,214,1) 0%,rgba(254,254,254,1) 30%,rgba(254,254,254,1) 47%,rgba(254,254,254,1) 71%,rgba(55,132,214,1) 100%); /* W3C */
+  width: 90%;
+  height: 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 0 5vw blue;
+  transition: height .1s, margin-top .1s;
+  filter: blur(1px);
+}
+
+#saber.active {
+  height: 45vh;
+  margin-top: 0;
+}
+
+#saber.deflection {
+  background-color: #342D7E;
+}
+
+#hilt {
+  width: 100%;
+  height: 15vh;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: margin-top .5s;
+  background: linear-gradient(to right, #000 0%,#b0b0b0 50%,#000 100%);
+}
+
+#button {
+  position: absolute;
+  right: -.5vw;
+  width: .5vw;
+  height: 3vh;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #111;
+}
+
+.troopers {
+  height: 20vh;
+  position: absolute;
+  animation-duration: .5s; 
+}
+
+.troopers#left {
+  bottom: 10vh;
+  left: 10vw;
+}
+
+.troopers#right {
+  bottom: 20vh;
+  right: 27vw;
+}
+
+.troopers#top { 
+  top: 29vh;
+  left: 50vw;
+}
+
+.troopers#bottom {
+  bottom: 21vh;
+  left: 42vw;
+}
+
+@keyframes shake { 
+  0%, 100% {transform: translateX(0);} 
+  10%, 50%, 90% {transform: translateX(-10px);} 
+  20%, 60% {transform: translateX(10px);} 
+}
+   
+.shake { 
+  animation-name: shake; 
+}
+
+#healthbar {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+}
+
+#healthbar img {
+  width: 5vw;
+}
+
+#endgame {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0d0d0;
+  z-index:1000;
+}
+
+#endgame img {
+  display: block;
+  margin: 0 auto;
+  width: 50vh;
+}
+
+#endgame button {
+  margin-top: 50px;
+}
