@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soundboard</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="A soundboard made with CSS and Javascript">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Pokemon Soundboard</h1>
+  
+  <div id="container">
+   
+    <div class="box" id="one">
+      <img src="images/pikachu.png" id="pikachu">
+    </div>
+    <div class="box" id="two">
+      <img src="images/bulbasaur.png" id="bulbasaur">
+    </div>
+    <div class="box" id="three">
+      <img src="images/ditto.png" id="ditto">
+    </div>
+
+  </div>
+
+   <audio id="pikachu_sound">
+    <source src="audio/pikachu.wav" type="audio/wav">
+   </audio>
+   
+   <audio id="bulbasaur_sound">
+    <source src="audio/bulbasaur.wav" type="audio/wav">
+   </audio>
+   
+   <audio id="ditto_sound">
+    <source src="audio/ditto.wav" type="audio/wav">
+   </audio>
+  
+  <script src="javascript.js"></script>
+</body>
+</html>

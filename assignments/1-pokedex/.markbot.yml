@@ -2,7 +2,7 @@ repo: pokedex
 canvasCourse: web-dev-1
 
 naming: true
-liveWebsite: true
+#liveWebsite: true
 restrictFileTypes: true
 #bestPractices: true
 
@@ -10,9 +10,9 @@ restrictFileTypes: true
 git:
 
   # Force the students to make sure all their files are committed.
-  allCommitted: true
+  #allCommitted: true
   # Force the students to make sure all their files are pushed & synced.
-  allSynced: true
+  #allSynced: true
   
 allFiles:
 

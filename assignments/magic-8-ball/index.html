@@ -46,14 +46,14 @@
 			shake();
 
 			// set the answer to update on the screen in 2 seconds (after shaking things)
-			setTimeout(answer, 2000);
+			setTimeout(answer, 1000);
 		}
 
 		// this function sets up the movement for the ball, but doesn't actually move it
 		// it also is in charge of determining when the ball will stop shaking
 		function shake(){
-			intervalId = setInterval(move, 200);
-			setTimeout(cancelInterval, 2000);
+			intervalId = setInterval(move, 50);
+			setTimeout(cancelInterval, 1000);
 		}
 
 		// this function is responsibile for moving the ball around the screen
