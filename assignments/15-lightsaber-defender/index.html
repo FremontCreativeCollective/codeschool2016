@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lightsaber Defender</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Can you defend yourself from the onslaught of stormtroopers.">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="game">
+
+    <h1>Lightsaber Defender</h1>
+  
+    <div id="endgame">
+      <img src="imperial.png">
+      <button id="restartGame">Replay?</button>
+    </div>
+  
+    <div id="healthbar">
+      <img class="health" src="health.png">
+      <img class="health" src="health.png">
+      <img class="health" src="health.png">
+    </div>
+  
+    <img class="troopers" id="left" src="stormtrooper.png">
+    <img class="troopers" id="right" src="stormtrooper.png">
+    <img class="troopers" id="top" src="stormtrooper.png">
+    <img class="troopers" id="bottom" src="stormtrooper.png">
+
+    <div id="container">
+
+      <div id="saber">
+      </div>
+
+      <div id="hilt">
+        <div id="button"></div>
+      </div>
+
+    </div>
+  
+  </div>
+  
+  <audio class='blasters' id="blaster1">
+      <source src="blaster1.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio class='blasters' id="blaster2">
+      <source src="blaster2.mp3" type="audio/mpeg">
+  </audio>
+  
+   <audio class='blasters' id="blaster2">
+      <source src="blaster3.mp3" type="audio/mpeg">
+  </audio>
+  
+   <audio class='blasters' id="blaster2">
+      <source src="blaster4.mp3" type="audio/mpeg">
+  </audio>
+  
+   <audio class='blasters' id="blaster2">
+      <source src="blaster5.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="lightsaberOn">
+    <source src="lightsaberOn.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="lightsaberOff">
+      <source src="lightsaberOff.mp3" type="audio/mpeg">
+  </audio>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
