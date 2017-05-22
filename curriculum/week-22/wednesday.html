@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Fun</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="jQuery learning">
+	<style>
+	.box {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+	}
+
+	#one { background-color: red; }
+	#two { background-color: blue; }
+	#three { background-color: yellow; }
+
+	</style>
+</head>
+<body>
+  
+  <div id="container">
+  
+    <div class="box" id="one"></div>
+    <div class="box" id="two"></div>
+    <div class="box" id="three"></div>
+  
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  	var boxes = $(".box");
+
+  	for(var i = 0; i < boxes.length; i++){
+  		var box = boxes[i];
+
+  		var left = randomNumber(100) + "%";
+  		var top = randomNumber(100) + "%";
+
+  		animateBox(box, left, top)
+  	}
+
+  	$(".box").click(function(){
+  		console.log(this);
+  		console.log( $(this) );
+		
+		var left = randomNumber(100) + "%";
+  		var top = randomNumber(100) + "%";
+
+  		animateBox(this, left, top);
+   	});
+
+  	function randomNumber(max){
+  		return Math.floor(Math.random() * max);
+  	}
+
+  	function animateBox(box, left, top){
+  		$(box).animate({left: left, top: top});
+  	}
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+  font-family: arial;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-brand img {
+  height: 100%;
+}
+
+#menu {
+  padding: 10px 10px 0px 25px;
+  border-right: 1px solid #f1f1f1;
+}
+
+#menu .nav-stacked li a {
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 0px;
+}
+
+#menu .nav-stacked li span {
+  color: #b0b0b0;
+}
+
+#menu .nav-stacked li.active a {
+  background-color: #cc181e;
+  color: white;
+}
+
+#menu .nav-stacked li.active span {
+  color: white;
+}
+
+#menu .nav-stacked li.divider {
+  height: 2px;
+  background-color: #f1f1f1;
+}
+
+#menu .nav-stacked li.dropdown-header {
+  padding: 5px 5px;
+  color: #cc181e;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#content {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  padding-left: 0px;
+}
+
+#content-pills {
+  background-color: white;
+}
+
+#content-pills .nav-pills {
+  text-align: center;
+}
+
+#content-pills .nav-pills li {
+  float:none;
+  display:inline-block;
+}
+
+#content-pills .nav-pills li a {
+  color: #a1a1a1;
+  border-radius: 0px;
+}
+
+#content-pills .nav-pills li a:hover {
+  background-color: initial;
+  border-bottom: 2px solid #cc181e;
+}
+
+#content-pills .nav-pills li.active a {
+  color: black;
+  background-color: white;
+  border-bottom: 2px solid #cc181e;
+}
+
+#recommended {
+  margin-top: 25px;
+}
+
+#recommended div.row {
+  background-color: white;
+  padding-bottom: 25px;
+
+}
+
+#recommended div p#heading {
+  margin: 10px;
+  font-weight: bolder;
+}
+
+#recommended div p#heading:hover {
+  color: #337ab7;
+}
+
+.video-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.video-channel, .video-stats {
+  margin: 0;
+  font-size: .8em;
+}
+
+.video-channel a, .video-stats a {
+  color: #767676;
+}
+
+.video-channel a:hover, .video-stats a:hover {
+  color: #337ab7;
+}

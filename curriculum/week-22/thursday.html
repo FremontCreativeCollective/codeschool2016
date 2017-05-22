@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Fun</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Building a jQuery moving game?">
+	<style>
+	body {
+		margin: 0;
+	}
+
+	#container {
+		background-color: gray;
+		width: 800px;
+		height: 600px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#player {
+		background-color: red;
+		height: 100px;
+		width: 100px;
+		border-radius: 50px;
+		position: absolute;
+	}
+
+	.gate {
+		height: 275px;
+		width: 25px;
+		background-color: green;
+		position: relative;
+	}
+
+	#top {
+		top: 0;
+		left: 375px;
+	}
+
+	#bottom {
+		top: 50px;
+		left: 375px;
+	}
+
+	#goal {
+		width: 25px;
+		height: 25px;
+		background-color: red;
+		position: absolute;
+		top: 50px;
+		z-index: 1000;
+	}
+
+	#goal.right {
+		right: 50px;
+	}
+
+	#goal.left {
+		left: 50px;
+	}
+
+	#score {
+		line-height: 100px;
+		text-align: center;
+	}
+
+	#gameOver {
+		width: 400px;
+		height: 300px;
+		line-height: 150px;
+		text-align: center;
+		background-color: red;
+		border: 2px dotted black; 
+		position: absolute;
+		top: 150px;
+		left: 200px;
+		font-family: Arial, Verdana, sans-serif;
+		font-size: 24px;
+
+		/* hide initially, but will be displayed once you die!!!!!! */
+		display: none;
+	}         
+
+	</style>
+</head>
+<body>
+  
+  <div id="container">
+  
+    <div class="box" id="player">
+    	<div id="score">0</div>
+    </div>
+  
+    <div class="gate" id="top"></div>
+    <div class="gate" id="bottom"></div>
+
+    <div class="right" id="goal"></div>
+
+    <div id="gameOver">
+    	<p>	You hit the edge and you died! </p>
+    	<div>
+    		<button id="restart">Play again?</button>
+    	</div>
+    </div>
+
+  </div>
+
+<!--
+	- cube is the player
+	- when you press space bar, the cube gets smaller and then bigger
+	- gate in the game is only passable by the small cube
+	- get passed the gate
+-->
+
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="jquery-collision.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//alert("jQuery loaded");
+		
+			// these are the only keys on the keyboard we care about
+			var valid_keys = [32, 37, 38, 39, 40];
+
+			// HTML references
+			var player = $("#player");
+			var gates = $(".gate");
+			var goal = $("#goal");
+			var score = $("#score");
+			var score_number = 0;
+
+			var intervalId;
+			var currently_pressed = {};
+
+			$(document).keyup( function(event){
+				delete currently_pressed[event.keyCode]
+			});
+
+			$(document).keydown( function(event){
+				//console.log("The key was pressed!", event.keyCode);
+			
+				var keycode = event.keyCode;
+
+				// we care about 32, 37, 38, 39 and 40
+				if( valid_keys.indexOf(keycode) == -1 ){
+					// we don't care about this keypress
+					//console.log("We dont care keypress");
+					return;
+				}
+
+				if(keycode == 32){
+					squishPlayer();
+					return;
+				}
+
+				currently_pressed[keycode] = true;
+				//console.log(currently_pressed);
+			});
+
+			startGame();
+
+			function startGame(){
+				intervalId = setInterval(gameLoop, 33);
+			}
+			
+			function gameLoop(){
+
+				// var obj {
+				// 	 key: value,
+				// 	 key1:, value1
+				// }
+
+				// obj.hasOwnProperty("key1"); // true
+				// obj.hasOwnProperty("booyah"); // false
+
+				// hasOwnProperty is asking an object if some key exists
+
+			    if(currently_pressed.hasOwnProperty(37)){
+			    	//console.log("left");
+			    	if(parseInt(player.css("left")) >= 10) player.css("left", "-=5px");
+			    }
+
+			    if(currently_pressed.hasOwnProperty(38)){
+			    	//console.log("up");
+			    	if(parseInt(player.css("top")) >= 10) player.css("top", "-=10px");
+			    }
+
+			    if(currently_pressed.hasOwnProperty(39)){
+			    	//console.log("right");
+			    	if(parseInt(player.css("left")) <= 690) player.css("left", "+=5px");
+			    }
+
+			    if(currently_pressed.hasOwnProperty(40)){
+			    	console.log("down");
+			    	if(parseInt(player.css("top")) <= 490) player.css("top", "+=5px");			    	
+			    }
+
+			    var hit_gate = player.collision(gates);
+			    if(hit_gate.length > 0){
+			    	console.error("You died!");
+			    	gameOver();
+			    }
+
+			    var hit_goal = player.collision(goal);
+			    if(hit_goal.length > 0){
+			    	// add points
+			    	score_number += 5;
+			    	score.text(score_number);
+
+			    	// move the goal
+			    	if( goal.hasClass("right") ){
+			    		goal.removeClass("right").addClass("left");
+			    	}else{
+			    		goal.removeClass("left").addClass("right");
+			    	}
+			    }
+
+			    // simulate gravity
+				//if(parseInt(player.css("top")) <= 500) player.css("top", "+=5px");
+			}
+
+			function squishPlayer(){
+				score.animate({"line-height": "20px"})
+					 .delay(1000)
+					 .animate({"line-height": "100px"});
+
+				player.animate({width: "20px", height: "20px"})
+					  .delay(1000)
+					  .animate({width: "100px", height: "100px"});
+			}
+
+			function gameOver(){
+				//stop the gameLoop from running anymore
+				clearInterval(intervalId);
+
+				$("#gameOver").show(); //show = shortcut for css { display: block; }
+
+				// display message to user about death
+				// - [X] Create a div CENTERED inside of the container
+				// - [X] Hide the div with CSS 
+				// - [X] When gameOver runs, adjust the CSS of the message to show it
+			}
+
+			// allow them to restart game
+			// - [X] hide the game over dialog
+			// - [X] reset the position of the player to 0,0
+			// - [X] reset score to 0
+			
+			// when #restart is clicked, run restartGame()
+			$("#restart").click(function(){
+				$("#gameOver").hide();
+
+				player.css("top", 0).css("left", 0);
+
+				score_number = 0;
+				score.text(score_number);
+
+				startGame();
+			});
+
+			// FOR 2/2/2016
+			/*
+				MAKE SURE THE GOAL IS ON THE RIGHT HAND SIDE EVERY TIME THE GAME STARTS
+			*/
+
+		});
+
+	</script>
+
+</body>
+</html>

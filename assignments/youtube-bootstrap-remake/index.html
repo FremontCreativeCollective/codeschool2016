@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTube</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Remaking YouTube with Bootstrap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="style.css" rel="stylesheet">
+  <style>
+
+    #paragon {
+      color: #B0B0B0;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #paragon li h6 {
+      display: inline;
+      line-height: 28px;
+      font-size: 28px;
+    }
+
+    #paragon li {
+      display: inline;
+      padding-right: 25px;
+    }
+
+    #paragon li span {
+      line-height: 28px;
+      font-size: 28px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAV BAR -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="row">
+        <div class="col-md-2">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="youtube_logo.png"</span></a>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <div class="col-7-md">
+          <!-- Collect the nav links, forms, and other content for toggling -->
+            <form class="navbar-form navbar-left">
+              <div class="input-group col-md-12">
+                <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </span>
+              </div>
+            </form>
+        </div>
+        <div class="col-3-md">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+  </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+  </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+  </a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>
+  <!-- /TOP NAV BAR -->
+
+  <!-- CONTENT -->
+  <div class="row">
+    <div class="col-md-2" id="menu">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> My Channel</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Trending</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Subscription</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> History</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Watch Later</a></li>
+      
+        <li role="separator" class="divider"></li>
+
+        <li class="dropdown-header">Playlists</li>
+
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Liked videos</a></li>
+
+        <li role="separator" class="divider"></li>
+
+        <li class="dropdown-header">Subscriptions</li>
+
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span> Treehouse</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Creative Collective</a></li>
+
+        <li role="separator" class="divider"></li>
+
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Browse Channels</a></li>
+
+        <li role="separator" class="divider"></li>
+
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> YouTube Red</a></li>
+        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> YouTube Movies</a></li>
+
+      </ul>
+    </div>
+    <div id="content" class="col-md-10">
+
+      <div id="content-pills">
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Trending</a></li>
+          <li role="presentation"><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+
+      <div class="row" id="recommended">
+        <div class="col-md-10 col-md-offset-1">
+
+          <div class="row" class="recommended-row">
+            <p id="heading">Recommended</p>
+      
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+          </div> <!-- ends row -->
+
+          <div class="row" class="recommended-row">
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+          </div> <!-- ends row -->
+
+          <div class="row" class="recommended-row">
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a href="#"><img src="http://lorempixel.com/200/125/"></a>
+              <div class="caption">
+                <p class="video-title"><a href="#">Video One</a></p>
+                <p class="video-channel"><a href="#">Super Fantastic Videos</a></p>
+                <p class="video-stats"><a href="#">30,000 views - 3 months ago</a></p>
+              </div>
+            </div>
+          </div> <!-- ends row -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /CONTENT -->
+
+
+  <!-- funsies -->
+  <div style="margin: 100px;">
+    <ul id="paragon">
+      <li>
+        <span class="hero-checkboxes glyphicon glyphicon-unchecked"></span>
+        <h6>Hero Name</h6>
+      </li>
+      <li>
+        <span class="hero-checkboxes glyphicon glyphicon-unchecked"></span>
+        <h6>Hero Name</h6>
+      </li>
+      <li>
+        <span class="hero-checkboxes glyphicon glyphicon-unchecked"></span>
+        <h6>Hero Name</h6>
+      </li>
+      <li>
+        <span class="hero-checkboxes glyphicon glyphicon-unchecked"></span>
+        <h6>Hero Name</h6>
+      </li>
+      <li>
+        <span class="hero-checkboxes glyphicon glyphicon-unchecked"></span>
+        <h6>Hero Name</h6>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    var spans = document.getElementsByClassName("hero-checkboxes"); 
+    for(var i = 0; i < spans.length; i++){
+      var span = spans[i];
+
+      span.addEventListener('click', toggleGlyphicon);
+    }
+
+    function toggleGlyphicon(event){
+      console.log(event);
+
+      if(event.target.classList.contains("glyphicon-unchecked")){
+        // it is current unchecked, must change it to checked
+        event.target.classList.remove("glyphicon-unchecked");
+        event.target.classList.add("glyphicon-record");
+      } else {
+        // it is checked, need to uncheck it
+        event.target.classList.remove("glyphicon-record");
+        event.target.classList.add("glyphicon-unchecked");
+      }
+    }
+
+
+  </script>
+
+</body>
+</html>

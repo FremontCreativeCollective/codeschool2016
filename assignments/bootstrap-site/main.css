@@ -1,0 +1,44 @@
+#header {
+	background-image: url('jumbotron.jpg');
+	background-position: center;
+	color: #FFF;
+}
+
+#header a.btn {
+	background-image: url('flag.jpg');
+	background-size: cover;
+	color: #000;
+}
+
+#marketing div img {
+	display: block;
+	margin: 5px auto 25px auto;
+}
+
+#newsletter {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#footer {
+	background-color: #b0b0b0;
+	margin-top: 100px;
+}
+
+#footer div h1 small {
+	/*color: blue;*/
+}
+
+.footer-pills li a {
+	/*color: red;*/
+}
+
+#carousel-container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.slider-pic {
+	width: 800px;
+	max-height: 300px;
+}

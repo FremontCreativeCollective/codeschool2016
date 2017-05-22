@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Royal Canadian Website of Truth</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Brock Ellis">
+	<meta name="description" content="Building a full website with bootstrap and jQuery">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+ 
+ 	<!-- TOP NAVIGATION BAR -->
+ 	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Royal Canadian Website</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+	        <li><a href="about.html">About</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Prime Minister</a></li>
+	            <li><a href="#">Royal Cardinal</a></li>
+	            <li><a href="#">Head Honcho</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="grand-poobah.html">Grand Poobah</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#">Imperial Wizard</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+	      </ul>
+
+	      <p>
+	      	<a href="#">Login</a>
+	      	Or
+	      	<a href="#">Register</a>
+	      </p>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- CONTENT OF THE SITE -->
+	<div class="container-fluid">
+
+		<div class="jumbotron" id="header">
+		  <h1>O Canada</h1>
+		  <p>Our home and native land!</p>
+		  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+		</div>
+
+		<div class="row" id="marketing">
+		  <div class="col-md-4">
+		  	<img src="http://lorempixel.com/200/200/sports/" class="img-responsive img-circle" alt="For Queen and Country">
+		  	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		  </div>
+
+		  <div class="col-md-4">
+		  	<img src="http://lorempixel.com/200/200/sports/" class="img-responsive img-circle" alt="For Queen and Country">
+		  	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		  </div>
+
+		  <div class="col-md-4">
+		  	<img src="http://lorempixel.com/200/200/sports/" class="img-responsive img-circle" alt="For Queen and Country">
+		  	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		  </div>
+		</div> <!-- end row -->
+
+		<div class="row" id="newsletter">
+
+			<div class="col-md-6 col-md-offset-3">
+				
+				<form>
+				  	<div class="form-group">
+				    	<label for="exampleInputEmail1">Sign up for our newsletter!</label>
+				    	<input type="email" class="form-control" id="exampleInputEmail1" 	placeholder="Email">
+				  	</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+			</div>
+
+		</div> <!-- end row -->
+
+	</div> <!-- end container -->
+
+	<div class="row" id="footer">
+		
+		<div class="col-md-3 col-md-offset-2">
+			<h1>Royal <small>subjects</small></h1>
+
+			<ul class="nav nav-pills nav-stacked footer-pills">
+			  <li role="presentation"><a href="#">Garbage Men</a></li>
+			  <li role="presentation"><a href="#">School Principals</a></li>
+			  <li role="presentation"><a href="#">Butcher</a></li>
+			</ul>
+
+		</div>
+
+		<div class="col-md-3 col-md-offset-2">
+			<h1>Native <small>land</small></h1>
+
+			<ul class="nav nav-pills nav-stacked footer-pills">
+			  <li role="presentation"><a href="#">Parks</a></li>
+			  <li role="presentation"><a href="#">Lakes</a></li>
+			  <li role="presentation"><a href="#">Mountains</a></li>
+			</ul>
+		</div>
+	
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Login to Royal Canadian Website</h4>
+	      </div>
+	      <div class="modal-body">
+	        
+	      	<form>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Remember me
+			    </label>
+			  </div>
+			</form>
+
+			<a href="signup.html">Register for an account</a>
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-success">Login</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

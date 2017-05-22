@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Circle Scramble</title>
+    <style>
+      .circle {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        position: absolute;
+      }
+
+    #red {
+      background-color: red;
+    }
+
+    #question {
+      color: #FFF;
+      text-align: center;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: black;
+      background-size: 100%;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+    }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        function move() {
+          var circles = $(".circle");
+
+          for(var i=0; i < circles.length; i++){
+            var circle = circles[i];
+
+            var top = Math.floor(Math.random() * 101) + "%";
+            var left = Math.floor(Math.random() * 101) + "%";
+
+            $(circle).css("top", top).css("left", left);
+          }
+        }
+
+        $(".circle").on('click', function(){ //done at 10:35
+          if( $(this).is('#red') ){
+            var score = 20;
+          }else{
+            var score = 10;
+          }
+
+          var currentScore = localStorage.getItem('currentScore');
+          if(currentScore){
+            currentScore = parseInt(currentScore) + score;
+          }else{
+            curentScore = score;
+          }
+
+          localStorage.setItem('currentScore', currentScore);
+          checkHighScore();
+          loadScores();
+
+        });
+
+        function checkHighScore(){
+          var highScore = localStorage.getItem('highScore');
+          var currentScore = localStorage.getItem('currentScore');
+
+          if(!highScore){
+            highScore = 0;
+          }
+          
+          console.log("Current Score: " + currentScore);
+          console.log("High Score: " + highScore);
+          if( parseInt(currentScore) > parseInt(highScore) ){
+            console.log("Setting high score");
+            localStorage.setItem('highScore', currentScore);
+          }
+        }
+
+        function loadScores(){
+          var score;
+          if( localStorage.getItem('highScore') ) {
+            score = localStorage.getItem('highScore');
+          }else{
+            score = 0;
+          }
+
+          $("#highScore").text(score);
+
+          if( localStorage.getItem('currentScore') ) {
+            score = localStorage.getItem('currentScore');
+          }else{
+            score = 0;
+          }
+
+          $("#currentScore").text(score);
+        }
+
+        function timer() {
+          var timer = $("#timer").text();
+          timer = parseInt(timer);
+          timer--;
+
+          if(timer < 0){
+            endGame();
+          }else{
+            $("#timer").text(timer);
+          }
+        }
+
+        function endGame(){
+          localStorage.setItem('currentScore', 0);
+          $("#currentScore").text("0");
+          displayQuestion();
+        }
+
+        function resetTimer(){
+          $("#timer").text("10");
+        }
+
+        move();
+        loadScores();
+        displayQuestion();
+
+        function displayQuestion(){
+          resetTimer();
+          $("#question").show();
+        }
+
+        $("#start").on('click', function(){
+          startGame();
+        })
+
+        function startGame(){
+          localStorage.setItem('currentScore', 0);
+          setInterval(move, 1000);
+          setInterval(timer, 1000);
+          resetTimer();
+          $("#question").hide();
+        }
+
+
+      })
+    </script>
+
+
+  </head>
+  <body>
+
+
+    <div id="question">
+      <h1>Circle Scramble!</h1>
+      <button type="button" id="start">Start Game?</button>
+    </div>
+
+    <div id="scores">
+      <p>Current Score: <span id="currentScore">0</span></p>
+      <p>High Score: <span id="highScore">0</span></p>
+    </div>
+
+    <div>Time: <span id="timer">10</span></div>
+
+    <div class="circle" id="red"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+  </body>
+</html>
